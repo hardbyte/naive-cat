@@ -4,13 +4,13 @@ use std::io::{BufReader, Read};
 use clap::{App, Arg};
 use std::io::BufRead;
 
-const USAGE: &'static str = "Usage: cat [option] [FILE]";
+const USAGE: &'static str = "Usage: cat [options] [FILE]";
 
 
 fn main() {
     let app = App::new("cat")
         .version("0.1.0")
-        .about(USAGE)
+        .about("Concatenate FILE to standard output.\n\nWith no FILE, or when FILE is -, read standard input.")
         .arg(
             Arg::with_name("input")
                 .help("Input file")
